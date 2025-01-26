@@ -33,6 +33,16 @@ implementation("{{ cookiecutter.maven_group }}:{{ cookiecutter.subproject1 }}:VE
 implementation("{{ cookiecutter.maven_group }}:{{ cookiecutter.subproject2 }}:VERSION")
 ```
 
+### Building
+
+Use `./gradlew` to build the project.
+
+e.g.
+
+```console
+./gradlew --stacktrace clean ktlintFormat build dependencyUpdates ktlintCheck test assemble publish makeDocs
+```
+
 ### Repository/Publishing Setup
 
 - set up a GPG key
