@@ -20,3 +20,7 @@ cookiecutter gh:NJAldwin/maven-central-template
 ```
 
 Then follow the instructions in the generated README.
+
+## This Template
+
+This template is based on https://github.com/NJAldwin/maven-central-test -- for more information, refer to that repo.

@@ -33,7 +33,7 @@ implementation("{{ cookiecutter.maven_group }}:{{ cookiecutter.subproject1 }}:VE
 implementation("{{ cookiecutter.maven_group }}:{{ cookiecutter.subproject2 }}:VERSION")
 ```
 
-### Building
+## Building
 
 Use `./gradlew` to build the project.
 
@@ -43,9 +43,9 @@ e.g.
 ./gradlew --stacktrace clean ktlintFormat build dependencyUpdates ktlintCheck test assemble publish makeDocs
 ```
 
-### Repository/Publishing Setup
+## Repository/Publishing Setup
 
-- set up a GPG key
+- set up and publish a GPG key
 - add GPG key information to GitHub (`Secrets and variables -> Actions`) in `JRELEASER_GPG_PASSPHRASE`, `JRELEASER_GPG_PUBLIC_KEY`, and `JRELEASER_GPG_SECRET_KEY`
 - set up a Maven Central account
 - perform DNS TXT verification in Maven Central for the group ID's domain
@@ -53,6 +53,14 @@ e.g.
 - add the Maven credentials to GitHub (`Secrets and variables -> Actions`) in `JRELEASER_MAVENCENTRAL_TOKEN` and `JRELEASER_MAVENCENTRAL_USERNAME`
 - set up the `gh-pages` branch for github-pages (`Environments`)
 
-### Etc
+## Publishing
+
+To publish a release, update the version number in `build.gradle.kts`, then create a new version tag pointing to the latest commit in `master`.  Tags must be in [semver](https://semver.org/) format with a `v` prefix (i.e. `vMAJOR.MINOR.PATCH`).
+
+The GitHub action will automatically build and publish the release to Maven Central and GitHub Pages, then create a GitHub Release.
+
+Tags with a prerelease version (e.g. `-alpha.1`) will be marked as prereleases in GitHub and will not be linked from the `/stable` link in the docs.
+
+## Etc
 
 Based on https://github.com/NJAldwin/maven-central-test
