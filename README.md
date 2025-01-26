@@ -16,7 +16,7 @@ pipx install cookiecutter
 ## Usage
 
 ```console
-cookiecutter gh:NJAldwin/gradle-maven-central-template
+cookiecutter gh:NJAldwin/maven-central-template
 ```
 
 Then follow the instructions in the generated README.
