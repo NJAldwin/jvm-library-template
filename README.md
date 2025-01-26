@@ -1,4 +1,4 @@
-# Template for Gradle Maven Central project
+# Template for JVM Library
 
 This project is a `cookiecutter` template for creating a Gradle project that can be published to Maven Central.
 
@@ -16,7 +16,7 @@ pipx install cookiecutter
 ## Usage
 
 ```console
-cookiecutter gh:NJAldwin/maven-central-template
+cookiecutter gh:NJAldwin/jvm-library-template
 ```
 
 Then follow the instructions in the generated README.
