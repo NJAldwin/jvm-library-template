@@ -1,0 +1,19 @@
+{
+  "project_slug": "your-repo-name",
+  "repo_gh_name": "{{ cookiecutter.project_slug }}",
+  "author_gh_user": "YourGitHubUsername",
+  "author_name": "Your Name",
+  "maven_group": "com.your.maven.group.id",
+  "package": "{{ cookiecutter.maven_group }}",
+  "package_as_dir": "{{ cookiecutter.package.replace('.', '/') }}",
+  "version": "0.1.0-alpha.1",
+  "project_description": "A project description",
+  "readme_desc": "A longer project description for the readme.",
+  "copyright_start_year": "2025",
+  "subproject1": "a-subproject-module-name",
+  "subproject1_description": "A description of the first subproject",
+  "subproject1_readme_desc": "A longer description of the first subproject",
+  "subproject2": "another-subproject-module-name",
+  "subproject2_description": "A description of the second subproject",
+  "subproject2_readme_desc": "A longer description of the second subproject"
+}
