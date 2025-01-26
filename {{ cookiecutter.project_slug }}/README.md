@@ -64,3 +64,5 @@ Tags with a prerelease version (e.g. `-alpha.1`) will be marked as prereleases i
 ## Etc
 
 Based on https://github.com/NJAldwin/maven-central-test
+
+Library template: https://github.com/NJAldwin/jvm-library-template
